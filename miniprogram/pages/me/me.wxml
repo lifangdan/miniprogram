@@ -1,5 +1,5 @@
 <view class="personCenter">
-  <!--  -->
+  <!--登录成功-->
   <view wx:if="{{userInfo.openid}}">
     <image class="avater" src="{{userInfo.avatarUrl}}"></image>
     <view>{{userInfo.nickName}}</view>
