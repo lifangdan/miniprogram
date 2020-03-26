@@ -1,0 +1,14 @@
+<view class="personCenter">
+  <!--  -->
+  <view wx:if="{{userInfo.openid}}">
+    <image class="avater" src="{{userInfo.avatarUrl}}"></image>
+    <view>{{userInfo.nickName}}</view>
+  </view>
+  <view wx:else>
+    <image class="avater" src="../../images/no_login.png"></image>
+    <view>
+      <button bindgetuserinfo="onGetUserInfo" open-type="getUserInfo" size="mini">登录</button>
+    </view>
+  </view>
+  
+</view>
