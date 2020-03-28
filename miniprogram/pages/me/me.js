@@ -12,7 +12,7 @@ Page({
       let userInfo=e.detail.userInfo
       //调用云函数获取用户openid
       wx.cloud.callFunction({
-        name:'login',
+        name:'login',//云函数的名称
         complete:res=>{
           userInfo.openid=res.result.openid;
           //修改data里的userInfo参数

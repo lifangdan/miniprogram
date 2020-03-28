@@ -10,4 +10,5 @@
       <button bindgetuserinfo="onGetUserInfo" open-type="getUserInfo" size="mini">登录</button>
     </view>
   </view>
+  
 </view>
