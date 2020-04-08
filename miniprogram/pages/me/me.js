@@ -8,6 +8,7 @@ Page({
     userInfo: wx.getStorageSync("userInfo")||{}
   },
   onGetUserInfo(e){
+    console.log(123456)
       console.log(e)
       let userInfo=e.detail.userInfo
       //调用云函数获取用户openid
@@ -24,6 +25,13 @@ Page({
           console.log(res)
         }
       })
+  },
+  exitLogin(){
+    console.log('退出')
+    wx.removeStorageSync('userInfo')
+    this.setData({
+      userInfo:{}
+    })
   },
   /**
    * 生命周期函数--监听页面加载

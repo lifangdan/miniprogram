@@ -1,14 +1,20 @@
 <view class="personCenter">
-  <!--登录成功-->
-  <view wx:if="{{userInfo.openid}}">
-    <image class="avater" src="{{userInfo.avatarUrl}}"></image>
-    <view>{{userInfo.nickName}}</view>
-  </view>
-  <view wx:else>
-    <image class="avater" src="../../images/no_login.png"></image>
-    <view>
-      <button bindgetuserinfo="onGetUserInfo" open-type="getUserInfo" size="mini">登录</button>
-    </view>
-  </view>
-  
+	<view>
+		<view class="login-top" wx:if="{{userInfo.openid}}">
+			<image class="avater" src="{{userInfo.avatarUrl}}"></image>
+			<view class="user-info">
+				<text>{{userInfo.nickName}}</text>
+			</view>
+		</view>
+		<view wx:else class="login-top">
+			<image class="avater" src="../../images/user.png"></image>
+			<view class="user-info">
+				<button class="login-btn" size="mini" plain bindgetuserinfo="onGetUserInfo" open-type="getUserInfo">点击登录</button>
+			</view>
+		</view>
+	</view>
+	<view class="login-out" wx:if="{{userInfo.openid}}">
+		<button type="warn" plain size="default" bindtap="exitLogin">退出登录</button>
+	</view>
+
 </view>

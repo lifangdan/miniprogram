@@ -1,10 +1,41 @@
 /* miniprogram/pages/me/me.wxss */
-.personCenter{
-  text-align: center;
-  padding: 20px;
+.personCenter {
+  /* text-align: center;
+  padding: 20px; */
 }
-.avater{
-  width: 100px;
+
+.login-top {
+  background:#d81e06;/* #ff5370;*/
+  padding: 50rpx 30rpx;
+  display: flex;
+  align-items: center;
+}
+
+.login-top .avater {
+  width: 140rpx;
+  height: 140rpx;
+  margin-right: 30rpx;
+  border-radius: 50%;
+}
+.user-info text{
+  color: #fff;
+}
+.user-info .login-btn{
+  color: #fff;
+  border: none;
+}
+.avater {
+  /* width: 100px;
   height: 100px;
   border-radius: 50%;
+  margin-bottom: 50rpx; */
+}
+
+.login-out {
+  margin-top: 150rpx;
+}
+
+.login-out button {
+  width: 90%;
+  margin:0 auto;
 }
