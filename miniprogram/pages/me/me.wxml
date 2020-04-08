@@ -13,6 +13,12 @@
 			</view>
 		</view>
 	</view>
+	<view>
+		<van-cell-group>
+			<van-cell is-link title="个人资料" link-type="navigateTo" url="/pages/profile/profile" />
+      <van-cell is-link title="添加图书" link-type="navigateTo" url="/pages/profile/profile" />
+		</van-cell-group>
+	</view>
 	<view class="login-out" wx:if="{{userInfo.openid}}">
 		<button type="warn" plain size="default" bindtap="exitLogin">退出登录</button>
 	</view>

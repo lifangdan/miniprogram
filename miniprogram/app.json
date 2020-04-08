@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/profile/profile",
     "pages/me/me",
     "pages/index/index",
     "pages/userConsole/userConsole",
@@ -14,7 +15,6 @@
     "pages/openapi/cloudid/cloudid",
     "pages/im/im",
     "pages/im/room/room"
-    
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -25,7 +25,7 @@
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {
-    "color":"#bfbfbf",
+    "color": "#bfbfbf",
     "selectedColor": "#d81e06",
     "list": [
       {
@@ -53,6 +53,8 @@
     "van-tag": "@vant/weapp/tag/index",
     "van-icon": "@vant/weapp/icon/index",
     "van-checkbox": "@vant/weapp/checkbox/index",
-    "van-steps": "@vant/weapp/steps/index"
+    "van-steps": "@vant/weapp/steps/index",
+    "van-radio": "@vant/weapp/radio/index",
+    "van-radio-group": "@vant/weapp/radio-group/index"
   }
 }
