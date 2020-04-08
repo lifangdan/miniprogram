@@ -1,0 +1,5 @@
+/* miniprogram/pages/profile/profile.wxss */
+.save{
+  width: 90%;
+  margin: 100rpx auto 0;
+}
