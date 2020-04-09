@@ -1,5 +1,8 @@
 // miniprogram/pages/profile/profile.js
-const db = wx.cloud.database()
+// const db = wx.cloud.database()
+const db = wx.cloud.database({
+  env:"lifangdan-cnk2z"
+});
 Page({
 
   /**
