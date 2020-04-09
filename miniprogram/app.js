@@ -1,5 +1,6 @@
 //app.js
 App({
+  openid: 'wxc3a062ade8d6f585',
   onLaunch: function () {
     
     if (!wx.cloud) {

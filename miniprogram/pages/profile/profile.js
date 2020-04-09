@@ -1,58 +1,63 @@
 // miniprogram/pages/profile/profile.js
 // const db = wx.cloud.database()
-const db = wx.cloud.database({
-  env:"lifangdan-cnk2z"
-});
+const db = wx.cloud.database();
+const app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    userData: {}
+    _id: 0,
+    name: '',
+    sex: '',
+  },
+  changeName(e) {
+    console.log(7878787878)
+    console.log(e.detail)
+    this.data.name = e.detail;
+    console.log(this.data)
   },
   getData() {
-    db.collection('profile').get().then(res => {
+    let that=this
+    console.log(app.openid)
+    db.collection('profile').where({
+      _openid: app.openid
+}).get().then(res => {
       console.log(888888888)
       console.log(res.data)
-      this.setData({
-        userData: res.data[0]
+      let info = res.data[0];
+      that.setData({
+        name: info.name,
+        sex: info.sex,
+        _id: info._id
       })
-      console.log(this.data.userData)
+      console.log(this.data)
     })
   },
-  formSubmit: function (e) {
-    console.log('form发生了submit事件，携带数据为：', e.detail.value)
-    console.log(e)
-  },
-  formReset: function () {
-    console.log('form发生了reset事件')
-  },
-  changeName(e){
-      console.log(7878787878)
-      console.log(e.detail)
-      this.setData({
-        'userData.name': e.detail,
-      });
-      console.log(this.data.userData)
-  },
   update(e) {
-    var that = this
-    let id = this.data.userData._id
-    let name = this.data.userData.name
+    let that = this
     console.log(111111)
-    console.log(db.collection('profile'))
-    db.collection('profile').doc(id).update({
+    console.log(that.data._id)
+    console.log(that.data.name)
+    db.collection('profile').doc(that.data._id).update({
       data: {
-          name:'aa'
+        name: that.data.name,
       },
       success: function (res) {
         console.log(8999999999)
-        that.setData({
-          'userData.name':name,
-        });
         console.log(res)
-        
+        db.collection('profile').doc(that.data._id).get({
+          success: function (res) {
+            console.log(22222222)
+            console.log(res)
+            wx.showToast({
+              title: '修改成功',
+              icon: 'success'
+            })
+          },
+        })
+
       }
     })
     // db.collection('profile').update({
