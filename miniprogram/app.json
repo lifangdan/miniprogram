@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/profile/profile",
     "pages/me/me",
+    "pages/profile/profile",
     "pages/index/index",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
