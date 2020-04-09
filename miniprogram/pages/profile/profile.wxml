@@ -1,14 +1,16 @@
 <!--miniprogram/pages/profile/profile.wxml-->
 <view>
 	<van-cell-group>
-		<van-field value="{{ userData.name }}" required clearable label="姓名" placeholder="请输入姓名" />
-		<van-field value="{{ userData.sex }}"  clearable label="性别" placeholder="" />
-    <van-field value="{{ userData.date }}"  clearable label="出生年月" placeholder="" />
-    <van-field value="{{ userData.record }}"  clearable label="学历" placeholder="" />
-    <van-field value="{{ userData.native }}"  clearable label="籍贯" placeholder="" />
-    <van-field value="{{ userData.address }}"  clearable label="住址" placeholder="" />
+		<form bindsubmit="formSubmit" bindreset="formReset">
+			<van-field bind:change="changeName" value="{{ userData.name }}" required clearable label="姓名" placeholder="请输入姓名" />
+			<van-field value="{{ userData.sex }}" clearable label="性别" placeholder="" />
+			<!-- <van-field value="{{ userData.date }}" clearable label="出生年月" placeholder="" />
+			<van-field value="{{ userData.record }}" clearable label="学历" placeholder="" />
+			<van-field value="{{ userData.native }}" clearable label="籍贯" placeholder="" />
+			<van-field value="{{ userData.address }}" clearable label="住址" placeholder="" /> -->
+		</form>
 	</van-cell-group>
-  <view class="save">
-    <button bindtap="update" type="warn" plain="">保存</button>
-  </view>
+	<view class="save">
+		<button bindtap="update" type="warn" plain="">保存</button>
+	</view>
 </view>

@@ -18,20 +18,40 @@ Page({
       console.log(this.data.userData)
     })
   },
+  formSubmit: function (e) {
+    console.log('form发生了submit事件，携带数据为：', e.detail.value)
+    console.log(e)
+  },
+  formReset: function () {
+    console.log('form发生了reset事件')
+  },
+  changeName(e){
+      console.log(7878787878)
+      console.log(e.detail)
+      this.setData({
+        'userData.name': e.detail,
+      });
+      console.log(this.data.userData)
+  },
   update(e) {
     var that = this
-    var id = e.currentTarget.dataset.id
-    db.collection('profile').doc("6aebd2215e8d7d7b006120be7d9e43be").update({
+    let id = this.data.userData._id
+    let name = this.data.userData.name
+    console.log(111111)
+    console.log(db.collection('profile'))
+    db.collection('profile').doc(id).update({
       data: {
-        name: 'aa',
+          name:'aa'
       },
       success: function (res) {
-        console.log(res)
         console.log(8999999999)
+        that.setData({
+          'userData.name':name,
+        });
+        console.log(res)
+        
       }
     })
-
-
     // db.collection('profile').update({
     //   data:this.data.userData
     // }).then(res => {
