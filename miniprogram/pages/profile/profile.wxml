@@ -10,7 +10,7 @@
 	</van-cell-group>
 	<view class="upload">
 		<view class="title">生活照</view>
-		<van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" bind:delete="delData"/>
+		<van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" bind:delete="delData" />
 		<!-- <van-button type="primary" size="small" bindtap='uploadImgHandle'>上传图片</van-button> -->
 	</view>
 	<view class="img-box">

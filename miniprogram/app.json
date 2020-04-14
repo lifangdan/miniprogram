@@ -1,9 +1,9 @@
 {
   "pages": [
-    "pages/profile/profile",
-    "pages/me/me",
-
     "pages/index/index",
+    "pages/me/me",
+    "pages/profile/profile",
+
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
     "pages/databaseGuide/databaseGuide",
@@ -21,15 +21,14 @@
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarTitleText": "体验云开发",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {
     "color": "#bfbfbf",
     "selectedColor": "#d81e06",
-    "list": [
-      {
+    "list": [{
         "pagePath": "pages/index/index",
         "text": "首页",
         "iconPath": "images/index.png",
@@ -56,6 +55,9 @@
     "van-checkbox": "@vant/weapp/checkbox/index",
     "van-steps": "@vant/weapp/steps/index",
     "van-radio": "@vant/weapp/radio/index",
-    "van-radio-group": "@vant/weapp/radio-group/index"
+    "van-radio-group": "@vant/weapp/radio-group/index",
+    "van-collapse": "@vant/weapp/collapse/index",
+    "van-collapse-item": "@vant/weapp/collapse-item/index",
+    "van-panel": "@vant/weapp/panel/index"
   }
 }

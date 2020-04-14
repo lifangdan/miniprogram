@@ -7,7 +7,9 @@ page {
   justify-content: flex-start;
 }
 
-.userinfo, .uploader, .tunnel {
+.userinfo,
+.uploader,
+.tunnel {
   margin-top: 40rpx;
   height: 140rpx;
   width: 100%;
@@ -61,7 +63,8 @@ page {
   flex: 1;
 }
 
-.uploader, .tunnel {
+.uploader,
+.tunnel {
   height: auto;
   padding: 0 0 0 40rpx;
   flex-direction: column;
@@ -69,7 +72,8 @@ page {
   box-sizing: border-box;
 }
 
-.uploader-text, .tunnel-text {
+.uploader-text,
+.tunnel-text {
   width: 100%;
   line-height: 52px;
   font-size: 34rpx;
@@ -150,4 +154,27 @@ page {
   font-size: 24rpx;
   line-height: 36rpx;
   word-break: break-all;
+}
+
+.swiper {
+  height: 500rpx;
+  text-align: center;
+}
+
+.company-box .item {
+  color: #333;
+  margin-bottom: 20rpx;
+  padding-left: 10rpx;
+}
+
+.item .con {
+  padding-left: 10rpx;
+}
+
+.item .company-title {
+  font-weight: bold;
+}
+
+.item .time {
+  font-size: 24rpx;
 }

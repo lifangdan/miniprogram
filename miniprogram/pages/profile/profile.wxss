@@ -7,8 +7,9 @@
 .upload {
   margin: 30rpx 0 0 30rpx;
 }
-.upload .title{
-  margin-bottom:20rpx;
+
+.upload .title {
+  margin-bottom: 20rpx;
 }
 
 .img-box {

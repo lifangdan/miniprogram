@@ -106,14 +106,13 @@ Page({
         fileList: res.data,
       })
     })
-
   },
 
-  delData(e){
+  delData(e) {
     let that = this
     let fileID = e.detail.file.fileID
     db.collection('fileList').doc(e.detail.file._id).remove({
-      success: function(res) {
+      success: function (res) {
         console.log(res)
         that.data.fileList.splice(that.data.fileList.findIndex(v => v.fileID == fileID), 1);
         let newList = that.data.fileList
@@ -127,9 +126,9 @@ Page({
       }
     })
   },
-    /**
-   * 删除云数据库图片
-   */
+  /**
+ * 删除云数据库图片
+ */
   delImg(e) {
     let fileID = e.detail.file.fileID
     wx.cloud.deleteFile({
