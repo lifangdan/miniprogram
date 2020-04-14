@@ -1,15 +1,22 @@
 <!--miniprogram/pages/profile/profile.wxml-->
 <view>
 	<van-cell-group>
-
-			<van-field bind:change="changeName" value="{{ name }}" required clearable label="姓名" placeholder="请输入姓名" />
-			<van-field value="{{ sex }}" clearable label="性别" placeholder="" />
-			<!-- <van-field value="{{ userData.date }}" clearable label="出生年月" placeholder="" />
-			<van-field value="{{ userData.record }}" clearable label="学历" placeholder="" />
-			<van-field value="{{ userData.native }}" clearable label="籍贯" placeholder="" />
-			<van-field value="{{ userData.address }}" clearable label="住址" placeholder="" /> -->
-
+		<van-field bind:change="changeName" value="{{ name }}" required clearable label="姓名" placeholder="请输入姓名" />
+		<van-field value="{{ sex }}" clearable label="性别" placeholder="" />
+		<van-field value="{{ date }}" clearable label="出生年月" placeholder="" />
+		<van-field value="{{record }}" clearable label="学历" placeholder="" />
+		<van-field value="{{native }}" clearable label="籍贯" placeholder="" />
+		<van-field value="{{address }}" clearable label="住址" placeholder="" />
 	</van-cell-group>
+	<view class="upload">
+		<van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" bind:delete="delData"/>
+		<!-- <van-button type="primary" size="small" bindtap='uploadImgHandle'>上传图片</van-button> -->
+	</view>
+	<view class="img-box">
+		<view class="item" wx:for="{{tempImg}}" wx:key="index">
+			<image class="img" src='{{item}}' mode='aspectFill'></image>
+		</view>
+	</view>
 	<view class="save">
 		<button bindtap="update" type="warn" plain="">保存</button>
 	</view>

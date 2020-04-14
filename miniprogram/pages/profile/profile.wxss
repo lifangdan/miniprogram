@@ -1,5 +1,27 @@
 /* miniprogram/pages/profile/profile.wxss */
-.save{
+.save {
   width: 90%;
   margin: 100rpx auto 0;
+}
+
+.upload {
+  margin: 30rpx 0 0 30rpx;
+}
+
+.img-box {
+  display: flex;
+}
+
+.img-box .item .img {
+  width: 150rpx;
+  height: 150rpx;
+  margin: 0 40rpx 20rpx 0;
+  border: 1px solid #eee;
+  flex: 1;
+  padding: 6rpx;
+}
+
+.img-box .item .img {
+  width: 150rpx;
+  height: 150rpx;
 }
